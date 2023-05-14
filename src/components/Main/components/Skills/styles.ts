@@ -3,16 +3,13 @@ import styled from "styled-components";
 export const SkillsContainer = styled.section`
     /* background-color: ${props => props.theme["--blue-300"]}; */
     background-image: url('/src/assets/skill.jpg');
-    
 `;
 
 export const SkillsOverlay = styled.div`
-    padding: 3rem;
     width: 100%;
     height: 100%;
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
     background-attachment: fixed;
-    
 `;
 
 export const SkillsWrapper = styled.div`
@@ -21,11 +18,6 @@ export const SkillsWrapper = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 3rem;
-
-    h2 {
-        font-weight: 500;
-    }
 `;
 
 export const Tools = styled.div`
@@ -60,21 +52,18 @@ export const ToolBox = styled.div`
 
     height: 3.75rem;
 
-    
-
     img {
         filter: grayscale(1);
-        transition: filter 1s ease;
+        transition: filter 0.7s ease;
     }
 
     &:hover {
-        transform: scale(2);
-
         img {
-            filter: none;
-            
+            filter: none; 
         }
-
         
+        span {
+            cursor: default;
+        }
     }
 `;

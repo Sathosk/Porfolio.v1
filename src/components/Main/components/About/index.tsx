@@ -1,4 +1,6 @@
 import { GameController, Keyboard, Planet } from "phosphor-react";
+
+import Tilt from "react-parallax-tilt";
 import {
     AboutContainer,
     AboutWrapper,
@@ -10,8 +12,8 @@ import {
 export function AboutSection() {
     return (
         <AboutContainer id="about">
-            <div className="container">
-                <AboutWrapper>
+            <div>
+                <AboutWrapper className="container">
                     <h2
                         data-aos="zoom-in"
                         data-aos-duration="1500"
@@ -48,30 +50,32 @@ export function AboutSection() {
                         then let's collaborate and create something amazing
                         together.
                     </p>
-                    <Tldr
-                        data-aos="flip-up"
-                        data-aos-duration="1000"
-                        data-aos-once="true"
-                        data-aos-easing="ease-in-out"
-                    >
-                        <h4>TL;DR</h4>
-                        <TldrContentWrapper>
-                            <TldrContent>
-                                <Keyboard size={50} />
-                                <span>Full Stack Development</span>
-                            </TldrContent>
+                    <Tilt tiltReverse={true} perspective={500}>
+                        <Tldr
+                            data-aos="flip-up"
+                            data-aos-duration="1000"
+                            data-aos-once="true"
+                            data-aos-easing="ease-in-out"
+                        >
+                            <h4>TL;DR</h4>
+                            <TldrContentWrapper>
+                                <TldrContent>
+                                    <Keyboard size={50} />
+                                    <span>Full Stack Development</span>
+                                </TldrContent>
 
-                            <TldrContent>
-                                <Planet size={50} />
-                                <span>Physics Enthusiast</span>
-                            </TldrContent>
+                                <TldrContent>
+                                    <Planet size={50} />
+                                    <span>Physics Enthusiast</span>
+                                </TldrContent>
 
-                            <TldrContent>
-                                <GameController size={50} />
-                                <span>Gamer</span>
-                            </TldrContent>
-                        </TldrContentWrapper>
-                    </Tldr>
+                                <TldrContent>
+                                    <GameController size={50} />
+                                    <span>Gamer</span>
+                                </TldrContent>
+                            </TldrContentWrapper>
+                        </Tldr>
+                    </Tilt>
                 </AboutWrapper>
             </div>
         </AboutContainer>

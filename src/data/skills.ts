@@ -1,4 +1,4 @@
-interface ToolsType {
+export interface ToolsType {
     name: string;
     src: string;
 }

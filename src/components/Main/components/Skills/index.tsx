@@ -12,7 +12,13 @@ export function SkillsSection() {
         <SkillsContainer id="skills" className="fixedBackground">
             <SkillsOverlay>
                 <SkillsWrapper className="container">
-                    <h2>TOOLING</h2>
+                    <h2
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-once="true"
+                    >
+                        TOOLING
+                    </h2>
                     <Tools>
                         {tools.map((tool, index) => {
                             return (

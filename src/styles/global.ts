@@ -12,6 +12,15 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
+    h2 {
+        font-weight: 500;
+    }
+
+    p {
+        font-weight: 300;
+        font-style: italic;
+    }
+
     body {
         font-family: 'Lato', sans-serif;
         background-color: #333333;
@@ -19,7 +28,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         width: 80%;
+        padding: 6rem 0;
         margin: 0 auto;
     }
 
