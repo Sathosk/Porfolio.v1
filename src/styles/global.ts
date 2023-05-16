@@ -56,5 +56,7 @@ export const GlobalStyle = createGlobalStyle`
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
-    }
+    } 
+
+    
 `;

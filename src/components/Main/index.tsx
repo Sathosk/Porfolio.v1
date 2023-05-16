@@ -1,7 +1,7 @@
 import { AboutSection } from "./components/About";
 import { IntroSection } from "./components/Intro";
 import { SkillsSection } from "./components/Skills";
-import { ProjectsSection } from "./components/projects";
+import { ProjectsSection } from "./components/Projects";
 import { MainContainer } from "./styles";
 
 export function Main() {
