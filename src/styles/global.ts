@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h2 {
-        font-weight: 500;
+        font-weight: 400;
     }
 
     p {
@@ -33,6 +33,7 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         flex-direction: column;
         width: 80%;
+        height: 100%;
         padding: 6rem 0;
         margin: 0 auto;
     }

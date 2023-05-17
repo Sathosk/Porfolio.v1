@@ -31,6 +31,7 @@ export const NavMenu = styled.ul<NavProps>`
     transition: height 0.6s ease-in;
 
     li {
+        font-weight: 700;
         padding: 0 1.25rem;
         transition: background-color .2s ease-in;
     }
@@ -44,7 +45,7 @@ export const NavMenu = styled.ul<NavProps>`
         flex-direction: column;
         align-items: center;
 
-        height: ${props => props.isOpen ? '16.375rem' : '0'};
+        height: ${props => props.isOpen ? '15.375rem' : '0'};
         width: 100%;
         overflow: hidden;
 
@@ -64,7 +65,7 @@ export const NavMenu = styled.ul<NavProps>`
         }
 
         li:last-child {
-            padding-bottom: 3rem;
+            padding-bottom: 2rem;
         }
     }
 `;

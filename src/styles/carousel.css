@@ -15,7 +15,7 @@
     transition: transform 1s;
 }
 
-.carousel_content {
+.carousel__content {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

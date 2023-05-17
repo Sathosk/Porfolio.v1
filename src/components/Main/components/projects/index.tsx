@@ -4,7 +4,12 @@ import { Carousel, CarouselItem } from "react-round-carousel";
 import { projects, ProjectsType } from "../../../../data/projects.js";
 
 import "/src/styles/carousel.css";
-import { ProjectsContainer, ProjectsWrapper } from "./style";
+import {
+    ButtonComponent,
+    ProjectsContainer,
+    ProjectsWrapper,
+    ResumeContainer,
+} from "./style";
 import { Modal } from "./components/Modal/index.js";
 
 export function ProjectsSection() {
@@ -34,7 +39,7 @@ export function ProjectsSection() {
         content: (
             <div
                 onClick={() => handleOpenModal(project)}
-                className="carousel_content"
+                className="carousel__content"
             >
                 <strong>{project.title}</strong>
                 <span>{project.shortDesc}</span>
@@ -70,7 +75,7 @@ export function ProjectsSection() {
                     data-aos-duration="1000"
                     data-aos-once="true"
                 >
-                    Projects
+                    PROJECTS
                 </h2>
                 <Carousel
                     items={items}
@@ -83,6 +88,17 @@ export function ProjectsSection() {
                     }
                 />
             </ProjectsWrapper>
+
+            <ResumeContainer>
+                <div className="overlay">
+                    <div className="container">
+                        <h2>CHECK OUT MY RÉSUMÉ!</h2>
+                        <ButtonComponent>
+                            <a href="#">Grab a copy</a>
+                        </ButtonComponent>
+                    </div>
+                </div>
+            </ResumeContainer>
         </ProjectsContainer>
     );
 }

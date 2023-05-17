@@ -37,7 +37,7 @@ export const Brand = styled.a`
 
     gap: 0.5rem;
 
-    font-weight: 500;
+    font-weight: 400;
     transition: opacity 300ms ease;
 
     svg {

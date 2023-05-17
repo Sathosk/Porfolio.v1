@@ -78,12 +78,23 @@ export function Modal({ modalOpen, currentProject, closeModal }: ModalProps) {
                         </button>
 
                         {/* Img Wrapper */}
-                        <div className={styles.imgWrapper}>
+                        <motion.div
+                            className={styles.imgWrapper}
+                            initial={{ x: -70, opacity: 0 }}
+                            animate={{
+                                x: 0,
+                                opacity: 1,
+                                transition: {
+                                    delay: 0.4,
+                                    duration: 0.6,
+                                },
+                            }}
+                        >
                             <img src={currentProject?.img} alt="" />
-                        </div>
+                        </motion.div>
 
                         {/* Desc Wrapper */}
-                        <div className={styles.descriptionWrapper}>
+                        <motion.div className={styles.descriptionWrapper}>
                             <p>{currentProject?.description}</p>
                             <div className="links">
                                 <span>
@@ -105,7 +116,7 @@ export function Modal({ modalOpen, currentProject, closeModal }: ModalProps) {
                                     </a>
                                 </span>
                             </div>
-                        </div>
+                        </motion.div>
                     </motion.div>
                 </motion.div>
             )}

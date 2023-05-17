@@ -17,7 +17,7 @@ export const AboutWrapper = styled.div`
     text-align: center;
 
     p {
-        max-width: 60rem;
+        max-width: 70rem;
     }
 
     img {

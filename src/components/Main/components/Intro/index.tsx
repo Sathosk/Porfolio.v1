@@ -19,20 +19,32 @@ export function IntroSection() {
                     <h1 data-aos="fade-down" data-aos-duration="1000">
                         Hi, I'm Tiago
                     </h1>
-                    <TypeAnimation
-                        sequence={[
-                            "Your next Full Stack Software Engineer",
-                            1000,
-                            "Your next Front-End Software Engineer",
-                            1000,
-                            "Your next Back-End Software Engineer",
-                            1000,
-                        ]}
-                        wrapper="span"
-                        cursor={true}
-                        speed={50}
-                        repeat={Infinity}
-                    />
+                    <div>
+                        <TypeAnimation
+                            sequence={["Your next"]}
+                            wrapper="span"
+                            className="text-1"
+                            cursor={false}
+                        ></TypeAnimation>
+                        <TypeAnimation
+                            sequence={[
+                                600,
+                                "Full Stack Software Engineer",
+                                1000,
+                                "Front-End Software Engineer",
+                                1000,
+                                "Back-End Software Engineer",
+                                1000,
+                            ]}
+                            wrapper="span"
+                            className="text-2"
+                            cursor={true}
+                            speed={50}
+                            deletionSpeed={60}
+                            repeat={Infinity}
+                        />
+                    </div>
+
                     <NextSection
                         href="#about"
                         data-aos="fade-up"

@@ -20,11 +20,17 @@ export const IntroContainer = styled.div`
 
     h1 {
         font-size: 3.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
     }
 
-    span {
-        font-weight: 300;
-        display: block;
+    .text-1 {
+        padding-right: 0.3rem;
+    }
+
+    .text-2 {
+        font-weight: bold;
+        text-decoration: underline;
     }
 `;
 
