@@ -1,9 +1,11 @@
 import { useRef } from "react";
 import { ProjectsType } from "../../../../../../data/projects";
-import styles from "./index.module.css";
+import { tools } from "../../../../../../data/skills.js";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "phosphor-react";
+
+import styles from "./index.module.css";
 
 interface ModalProps {
     modalOpen: boolean;
@@ -14,6 +16,16 @@ interface ModalProps {
 export function Modal({ modalOpen, currentProject, closeModal }: ModalProps) {
     const overlayRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+    const toolsObj = Object.fromEntries(
+        tools.map((tool) => [tool.name.toLowerCase(), tool.src])
+    );
+
+    toolsObj.handlebars =
+        "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original.svg";
+
+    const projectTechs = currentProject.technologies.toLowerCase().split(", ");
+    console.log(projectTechs);
 
     function handleCloseModal(
         e: React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>
@@ -94,29 +106,96 @@ export function Modal({ modalOpen, currentProject, closeModal }: ModalProps) {
                         </motion.div>
 
                         {/* Desc Wrapper */}
-                        <motion.div className={styles.descriptionWrapper}>
-                            <p>{currentProject?.description}</p>
-                            <div className="links">
-                                <span>
-                                    {"Live Demo: "}
-                                    <a
-                                        href={`${currentProject?.liveLink}`}
-                                        target="_blank"
+                        <div className={styles.descriptionWrapper}>
+                            <motion.div
+                                initial={{ x: -70, opacity: 0 }}
+                                animate={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: {
+                                        delay: 0.8,
+                                        duration: 0.6,
+                                    },
+                                }}
+                            >
+                                <p>{currentProject?.description}</p>
+                            </motion.div>
+
+                            <div className={styles.footer}>
+                                <div className="links">
+                                    <motion.div
+                                        initial={{ x: -70, opacity: 0 }}
+                                        animate={{
+                                            x: 0,
+                                            opacity: 1,
+                                            transition: {
+                                                delay: 1.2,
+                                                duration: 0.6,
+                                            },
+                                        }}
                                     >
-                                        {currentProject?.liveLink}
-                                    </a>
-                                </span>
-                                <span>
-                                    {"GitHub: "}
-                                    <a
-                                        href={`${currentProject?.githubLink}`}
-                                        target="_blank"
+                                        <span>
+                                            {"Live Demo: "}
+                                            <a
+                                                href={`${currentProject?.liveLink}`}
+                                                target="_blank"
+                                            >
+                                                {currentProject?.liveLink}
+                                            </a>
+                                        </span>
+                                    </motion.div>
+
+                                    <motion.div
+                                        initial={{ x: -70, opacity: 0 }}
+                                        animate={{
+                                            x: 0,
+                                            opacity: 1,
+                                            transition: {
+                                                delay: 1.6,
+                                                duration: 0.6,
+                                            },
+                                        }}
                                     >
-                                        {currentProject?.githubLink}
-                                    </a>
-                                </span>
+                                        <span>
+                                            {"GitHub: "}
+                                            <a
+                                                href={`${currentProject?.githubLink}`}
+                                                target="_blank"
+                                            >
+                                                {currentProject?.githubLink}
+                                            </a>
+                                        </span>
+                                    </motion.div>
+                                </div>
+                                <div className={styles.modalIcons}>
+                                    {projectTechs.map(
+                                        (tech) =>
+                                            toolsObj[tech] && (
+                                                <motion.div
+                                                    initial={{
+                                                        x: -70,
+                                                        opacity: 0,
+                                                    }}
+                                                    animate={{
+                                                        x: 0,
+                                                        opacity: 1,
+                                                        transition: {
+                                                            delay: 2,
+                                                            duration: 0.6,
+                                                        },
+                                                    }}
+                                                >
+                                                    <img
+                                                        className={styles.icon}
+                                                        src={`${toolsObj[tech]}`}
+                                                        title={tech}
+                                                    />
+                                                </motion.div>
+                                            )
+                                    )}
+                                </div>
                             </div>
-                        </motion.div>
+                        </div>
                     </motion.div>
                 </motion.div>
             )}

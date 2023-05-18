@@ -6,7 +6,7 @@ export interface ToolsType {
 export const tools: ToolsType[] = [
     {
         name: "HTML",
-        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg",
+        src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     },
     {
         name: "CSS",
