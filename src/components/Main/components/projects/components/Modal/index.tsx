@@ -25,7 +25,6 @@ export function Modal({ modalOpen, currentProject, closeModal }: ModalProps) {
         "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original.svg";
 
     const projectTechs = currentProject.technologies.toLowerCase().split(", ");
-    console.log(projectTechs);
 
     function handleCloseModal(
         e: React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>
@@ -44,7 +43,7 @@ export function Modal({ modalOpen, currentProject, closeModal }: ModalProps) {
             {modalOpen && (
                 // Modal Overlay
                 <motion.div
-                    className={styles.modalOverlay}
+                    className={`${styles.modalOverlay} ${styles.noselect}`}
                     ref={overlayRef}
                     onClick={(e) => handleCloseModal(e)}
                     initial={{
@@ -53,7 +52,7 @@ export function Modal({ modalOpen, currentProject, closeModal }: ModalProps) {
                     animate={{
                         opacity: 1,
                         transition: {
-                            duration: 0.3,
+                            duration: 0.5,
                         },
                     }}
                     exit={{
@@ -121,7 +120,9 @@ export function Modal({ modalOpen, currentProject, closeModal }: ModalProps) {
                                 <p>{currentProject?.description}</p>
                             </motion.div>
 
+                            {/* Footer */}
                             <div className={styles.footer}>
+                                {/* Links */}
                                 <div className="links">
                                     <motion.div
                                         initial={{ x: -70, opacity: 0 }}
@@ -167,6 +168,7 @@ export function Modal({ modalOpen, currentProject, closeModal }: ModalProps) {
                                         </span>
                                     </motion.div>
                                 </div>
+                                {/* Icons */}
                                 <div className={styles.modalIcons}>
                                     {projectTechs.map(
                                         (tech) =>

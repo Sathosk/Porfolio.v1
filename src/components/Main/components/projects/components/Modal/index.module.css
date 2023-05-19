@@ -23,7 +23,7 @@
     width: 60%;
     height: auto;
     max-height: 90vh;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     border-radius: 16px;
     border: 1px solid white;
 
@@ -39,6 +39,16 @@
     );
 
     overflow: auto;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
 }
 
 .closeButton {
