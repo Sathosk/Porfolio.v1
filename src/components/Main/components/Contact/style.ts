@@ -108,7 +108,7 @@ export const ContactFormWrapper = styled.div`
 
     div > button:hover {
         color: ${props => props.theme['--blue-500']};
-        background: white;
+        background: ${props => props.theme['--white']};
     }
 
     @media (max-width: 1050px) {

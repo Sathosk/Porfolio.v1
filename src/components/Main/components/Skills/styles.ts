@@ -10,7 +10,6 @@ export const SkillsOverlay = styled.div`
     width: 100%;
     height: 100%;
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
-    background-attachment: fixed;
 `;
 
 export const SkillsWrapper = styled.div`
@@ -44,14 +43,13 @@ export const ToolBox = styled.div`
     justify-content: space-evenly;
     align-items: center;
     flex: 1;
-    background-color: ${props => props.theme["--black"]};
 
     font-weight: 700;
 
+    height: 3.75rem;
     min-width: 8.2rem;
     border-radius: 8px;
-
-    height: 3.75rem;
+    background-color: ${props => props.theme["--black"]};
 
     img {
         filter: grayscale(1);

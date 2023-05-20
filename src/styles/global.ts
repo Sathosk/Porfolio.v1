@@ -61,4 +61,10 @@ export const GlobalStyle = createGlobalStyle`
     .githubIcon {
         filter: invert(100%);
     }
+
+    @supports (-webkit-touch-callout: none) {
+        .fixedBackground {
+            background-attachment: unset;
+        }
+    }
 `;

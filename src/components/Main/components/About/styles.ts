@@ -19,7 +19,6 @@ export const AboutWrapper = styled.div`
 
 
 export const ImgWrapper = styled.div`
-
     background: white;
     animation: morph 8s ease-in-out infinite;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
@@ -28,7 +27,6 @@ export const ImgWrapper = styled.div`
     transition: all 1s ease-in-out;
     width: 10rem;
     z-index: 5;
-
 
     @keyframes morph {
         0% {

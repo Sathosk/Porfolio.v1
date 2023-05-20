@@ -25,6 +25,10 @@ export const ResumeContainer = styled.section`
     background-image: url(${resumeImage});
     background-attachment: fixed;
     background-position: center;
+
+    @supports (-webkit-touch-callout: none) {
+        background-attachment: unset;
+    }
 `;
 
 export const ButtonComponent = styled.button`

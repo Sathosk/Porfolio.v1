@@ -13,13 +13,12 @@ export const HeaderContainer = styled.header<HeaderProps>`
 
     padding: 0 2rem;
     width: 100%;
+    height: ${props => props.isOnTop ? '5rem' : '3.125rem'};
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
 
-    height: ${props => props.isOnTop ? '5rem' : '3.125rem'};
-    
     transition: height 0.6s ease-in-out, background-color 0.6s ease-in-out;
 
     z-index: 999;
@@ -47,7 +46,6 @@ export const Brand = styled.a`
     }
 
     &:hover {
-        /* color: inherit; */
         opacity: 0.6;
 
         svg {
