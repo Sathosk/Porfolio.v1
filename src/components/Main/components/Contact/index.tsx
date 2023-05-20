@@ -163,7 +163,7 @@ export function ContactSection() {
 
                             <div
                                 data-aos="fade-right"
-                                data-aos-delay={1600}
+                                data-aos-delay={1300}
                                 data-aos-duration="500"
                                 data-aos-once="true"
                             >

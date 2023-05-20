@@ -35,11 +35,6 @@ export function SkillsSection() {
                                         alt=""
                                         width={30}
                                         height={30}
-                                        className={
-                                            tool.name === "GitHub"
-                                                ? "githubIcon"
-                                                : undefined
-                                        }
                                     />
                                     <span>{tool.name}</span>
                                 </ToolBox>
