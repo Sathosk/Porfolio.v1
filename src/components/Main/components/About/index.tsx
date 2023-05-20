@@ -4,6 +4,7 @@ import Tilt from "react-parallax-tilt";
 import {
     AboutContainer,
     AboutWrapper,
+    ImgWrapper,
     Tldr,
     TldrContent,
     TldrContentWrapper,
@@ -21,13 +22,15 @@ export function AboutSection() {
                     >
                         THE PERSON BEHIND THE PIXELS
                     </h2>
-                    <img
-                        src=""
-                        alt=""
+
+                    <ImgWrapper
                         data-aos="fade-in"
                         data-aos-duration="1700"
                         data-aos-once="true"
-                    />
+                    >
+                        <img src="" alt="" />
+                    </ImgWrapper>
+
                     <p
                         data-aos="fade-up"
                         data-aos-duration="1000"

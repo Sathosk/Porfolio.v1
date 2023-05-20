@@ -21,6 +21,7 @@ export function SkillsSection() {
                     </h2>
                     <Tools>
                         {tools.map((tool, index) => {
+                            console.log(tool.name);
                             return (
                                 <ToolBox
                                     data-aos="fade-right"
@@ -34,6 +35,11 @@ export function SkillsSection() {
                                         alt=""
                                         width={30}
                                         height={30}
+                                        className={
+                                            tool.name === "GitHub"
+                                                ? "githubIcon"
+                                                : undefined
+                                        }
                                     />
                                     <span>{tool.name}</span>
                                 </ToolBox>

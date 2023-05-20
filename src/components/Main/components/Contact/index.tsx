@@ -4,57 +4,43 @@ import {
     ContactFormWrapper,
     ContactText,
     ContactWrapper,
+    SocialMedia,
 } from "./style";
 import { EnvelopeSimple } from "phosphor-react";
 
 export function ContactSection() {
     return (
-        <ContactContainer>
+        <ContactContainer id="contact">
             <div className="container">
                 <ContactWrapper>
                     <ContactText>
                         {/* Heading */}
-                        <motion.div
-                            initial={{ x: -70, opacity: 0 }}
-                            animate={{
-                                x: 0,
-                                opacity: 1,
-                                transition: {
-                                    delay: 0.4,
-                                    duration: 0.6,
-                                },
-                            }}
+                        <div
+                            data-aos="fade-right"
+                            data-aos-easing="ease-in"
+                            data-aos-duration="500"
+                            data-aos-once="true"
                         >
                             <h4>
                                 Need a new <strong>Developer</strong>, or have a{" "}
                                 <strong>Project</strong> in mind?
                             </h4>
-                        </motion.div>
+                        </div>
                         {/* CTA */}
-                        <motion.div
-                            initial={{ x: -70, opacity: 0 }}
-                            animate={{
-                                x: 0,
-                                opacity: 1,
-                                transition: {
-                                    delay: 0.7,
-                                    duration: 0.6,
-                                },
-                            }}
+                        <div
+                            data-aos="fade-right"
+                            data-aos-delay={200}
+                            data-aos-duration="500"
+                            data-aos-once="true"
                         >
                             <span>Let's get in touch!</span>
-                        </motion.div>
+                        </div>
                         {/* Paragraph */}
-                        <motion.div
-                            initial={{ x: -70, opacity: 0 }}
-                            animate={{
-                                x: 0,
-                                opacity: 1,
-                                transition: {
-                                    delay: 1,
-                                    duration: 0.6,
-                                },
-                            }}
+                        <div
+                            data-aos="fade-right"
+                            data-aos-delay={400}
+                            data-aos-duration="500"
+                            data-aos-once="true"
                         >
                             <p>
                                 If you have any questions, feedback, or would
@@ -67,120 +53,122 @@ export function ContactSection() {
                                 connecting with you to discuss how we can work
                                 together to achieve mutual success!
                             </p>
-                        </motion.div>
+                        </div>
                         {/* Open Mail */}
-                        <motion.div
-                            initial={{ x: -70, opacity: 0 }}
-                            animate={{
-                                x: 0,
-                                opacity: 1,
-                                transition: {
-                                    delay: 1.3,
-                                    duration: 0.6,
-                                },
-                            }}
+                        <div
+                            data-aos="fade-right"
+                            data-aos-delay={600}
+                            data-aos-duration="500"
+                            data-aos-once="true"
                         >
                             <a href="mailto:tiagopereira31415@gmail.com">
                                 tiagopereira31415@gmail.com
                                 <EnvelopeSimple size={24} weight="bold" />
                             </a>
-                        </motion.div>
+                        </div>
+
+                        <SocialMedia
+                            data-aos="fade-right"
+                            data-aos-delay={1200}
+                            data-aos-duration="500"
+                            data-aos-once="true"
+                        >
+                            <a
+                                href="https://www.linkedin.com/in/tiagocruzpereira/"
+                                target="_blank"
+                            >
+                                <img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                                    alt=""
+                                    width={60}
+                                />
+                            </a>
+                            <a
+                                href="https://github.com/Sathosk"
+                                target="_blank"
+                            >
+                                <img
+                                    className="githubIcon"
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                    alt=""
+                                    width={60}
+                                />
+                            </a>
+                        </SocialMedia>
                     </ContactText>
                     <ContactFormWrapper>
                         <form action="">
-                            <motion.div
-                                initial={{ x: -70, opacity: 0 }}
-                                animate={{
-                                    x: 0,
-                                    opacity: 1,
-                                    transition: {
-                                        delay: 1.7,
-                                        duration: 0.6,
-                                    },
-                                }}
+                            <div
+                                data-aos="fade-right"
+                                data-aos-delay={800}
+                                data-aos-duration="500"
+                                data-aos-once="true"
                             >
                                 <h4>Get in touch!</h4>
-                            </motion.div>
+                            </div>
 
-                            <motion.div
+                            <div
                                 className="inputContainer"
-                                initial={{ x: -70, opacity: 0 }}
-                                animate={{
-                                    x: 0,
-                                    opacity: 1,
-                                    transition: {
-                                        delay: 2,
-                                        duration: 0.6,
-                                    },
-                                }}
+                                data-aos="fade-right"
+                                data-aos-delay={1000}
+                                data-aos-duration="500"
+                                data-aos-once="true"
                             >
                                 <label htmlFor="name">
                                     What should I call you?
                                 </label>
                                 <input
+                                    required
                                     type="text"
                                     id="name"
                                     placeholder="Name"
                                 />
-                            </motion.div>
+                            </div>
 
-                            <motion.div
-                                initial={{ x: -70, opacity: 0 }}
-                                animate={{
-                                    x: 0,
-                                    opacity: 1,
-                                    transition: {
-                                        delay: 2.3,
-                                        duration: 0.6,
-                                    },
-                                }}
+                            <div
+                                data-aos="fade-right"
+                                data-aos-delay={1200}
+                                data-aos-duration="500"
+                                data-aos-once="true"
                             >
                                 <label htmlFor="email">
                                     Where do I reply you?
                                 </label>
                                 <input
+                                    required
                                     type="text"
                                     id="email"
                                     placeholder="Email"
                                 />
-                            </motion.div>
+                            </div>
 
-                            <motion.div
-                                initial={{ x: -70, opacity: 0 }}
-                                animate={{
-                                    x: 0,
-                                    opacity: 1,
-                                    transition: {
-                                        delay: 2.6,
-                                        duration: 0.6,
-                                    },
-                                }}
+                            <div
+                                data-aos="fade-right"
+                                data-aos-delay={1400}
+                                data-aos-duration="500"
+                                data-aos-once="true"
                             >
                                 <label htmlFor="content">
                                     Pen Your Thoughts
                                 </label>
                                 <textarea
+                                    required
                                     name=""
                                     id="content"
                                     cols={30}
                                     rows={10}
                                     placeholder="In this space, your words have the power to inspire..."
                                 ></textarea>
-                            </motion.div>
+                            </div>
 
-                            <motion.div
-                                initial={{ x: -70, opacity: 0 }}
-                                animate={{
-                                    x: 0,
-                                    opacity: 1,
-                                    transition: {
-                                        delay: 2.9,
-                                        duration: 0.6,
-                                    },
-                                }}
+                            <div
+                                data-aos="fade-right"
+                                data-aos-delay={1600}
+                                data-aos-duration="500"
+                                data-aos-once="true"
                             >
                                 <button type="submit">Send away</button>
-                            </motion.div>
+                            </div>
                         </form>
                     </ContactFormWrapper>
                 </ContactWrapper>

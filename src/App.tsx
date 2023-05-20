@@ -6,12 +6,13 @@ import { defaultTheme } from "./styles/themes/default";
 
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
+import { Footer } from "./components/Footer";
 
 function App() {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [activeSection, setActiveSection] = useState("intro");
 
-    const sections = ["intro", "about", "skills", "projects"]; // add any other section ids here
+    const sections = ["intro", "about", "skills", "projects", "contact"]; // add any other section ids here to highlight the menu when on screen.
     const sectionOffsets = sections.map((section) => {
         return {
             id: section,
@@ -44,6 +45,7 @@ function App() {
             <ThemeProvider theme={defaultTheme}>
                 <Header isOnTop={isOnTop} activeSection={activeSection} />
                 <Main />
+                <Footer />
             </ThemeProvider>
 
             <GlobalStyle />

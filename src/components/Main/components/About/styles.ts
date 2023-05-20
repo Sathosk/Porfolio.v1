@@ -5,10 +5,9 @@ export const AboutContainer = styled.section`
     justify-content: center;
     align-items: center;
 
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.4) 75%, rgba(0, 0, 0, 0.3) 100%);
-    background-attachment: inherit;
+    
 
-    background-color: ${props => props.theme["--blue-500"]};
+    background: linear-gradient(0deg, rgba(18,36,56,1) 30%, rgba(13,27,42,1) 100%);
 `;
 
 export const AboutWrapper = styled.div`
@@ -17,15 +16,46 @@ export const AboutWrapper = styled.div`
     text-align: center;
 
     p {
-        max-width: 70rem;
+        max-width: 60rem;
     }
 
     img {
-        margin: 1rem 0;
+        /* margin: 1rem 0;
         width: 10rem;
         height: 10rem;
         background-color: white;
-        border-radius: 50%;
+        border-radius: 50%; */
+    }
+`;
+
+
+export const ImgWrapper = styled.div`
+
+    background: white;
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.6);
+    height: 10rem;
+    transition: all 1s ease-in-out;
+    width: 10rem;
+    z-index: 5;
+
+
+    @keyframes morph {
+        0% {
+                border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+                background: white;
+        } 
+        
+        50% {
+                border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+                background: white;
+        }
+    
+        100% {
+            border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+            background: white;
+        } 
     }
 `;
 

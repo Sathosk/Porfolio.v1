@@ -99,7 +99,6 @@ export const ContactFormWrapper = styled.div`
 
     div > button {
         border: 1px solid white;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         border-radius: 8px;
         padding: 0.7rem 1.5rem;
         margin-top: 1.5rem;
@@ -132,3 +131,13 @@ export const ContactFormWrapper = styled.div`
         }
     }
 `;
+
+export const SocialMedia = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    
+    width: 10rem;
+    margin-top: 2rem;
+`

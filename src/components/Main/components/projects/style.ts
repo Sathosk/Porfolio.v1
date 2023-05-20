@@ -8,11 +8,11 @@ export const ProjectsContainer = styled.section`
 
 export const ProjectsWrapper = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: space-between;
     flex-direction: column;
-    height: 100vh;
-    gap: 3rem;
+    height: auto;
+    gap: 2rem;
 `;
 
 export const ResumeContainer = styled.section`

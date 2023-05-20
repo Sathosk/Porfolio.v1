@@ -33,7 +33,6 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
         flex-direction: column;
         width: 80%;
-        height: 100%;
         padding: 6rem 0;
         margin: 0 auto;
     }
@@ -59,5 +58,7 @@ export const GlobalStyle = createGlobalStyle`
         background-repeat: no-repeat;
     } 
 
-    
+    .githubIcon {
+        filter: invert(100%);
+    }
 `;

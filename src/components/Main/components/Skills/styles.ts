@@ -61,6 +61,10 @@ export const ToolBox = styled.div`
         img {
             filter: none; 
         }
+
+        .githubIcon {
+            filter: invert(100%) !important;
+        }
         
         span {
             cursor: default;
