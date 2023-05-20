@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import pxfuel from '/src/assets/pxfuel.jpg'
+import pxfuel from '../../../../assets/pxfuel.jpg'
 
 export const Intro = styled.section`
     position: relative;

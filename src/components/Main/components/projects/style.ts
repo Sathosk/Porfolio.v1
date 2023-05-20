@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import resumeImage from "../../../../assets/resumeSection.jpg";
 
 export const ProjectsContainer = styled.section`
     position: relative;
@@ -21,7 +22,7 @@ export const ResumeContainer = styled.section`
     height: 20rem;
 
     background-size: cover;
-    background-image: url('/src/assets/resumeSection.jpg');
+    background-image: url(${resumeImage});
     background-attachment: fixed;
     background-position: center;
 `;
