@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import pxfuel from '/src/assets/pxfuel.jpg'
 
 export const Intro = styled.section`
     position: relative;
     height: 100vh;
-    background-image: url('/../../../src/assets/pxfuel.jpg');
+    background-image: url(${pxfuel});
 `;
 
 export const IntroContainer = styled.div`
