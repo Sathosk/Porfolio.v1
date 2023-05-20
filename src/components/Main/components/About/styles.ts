@@ -4,9 +4,6 @@ export const AboutContainer = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
-
     background: linear-gradient(0deg, rgba(18,36,56,1) 30%, rgba(13,27,42,1) 100%);
 `;
 
@@ -17,14 +14,6 @@ export const AboutWrapper = styled.div`
 
     p {
         max-width: 60rem;
-    }
-
-    img {
-        /* margin: 1rem 0;
-        width: 10rem;
-        height: 10rem;
-        background-color: white;
-        border-radius: 50%; */
     }
 `;
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Intro = styled.section`
     position: relative;
     height: 100vh;
-    background-image: url('src/assets/pxfuel.jpg');
+    background-image: url('/../../../src/assets/pxfuel.jpg');
 `;
 
 export const IntroContainer = styled.div`
