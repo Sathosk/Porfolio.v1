@@ -4,7 +4,7 @@ import { SkillsSection } from "./components/Skills";
 import { ContactSection } from "./components/Contact";
 // import ProjectsSection from "./components/Project";
 import { MainContainer } from "./styles";
-import { Funcionaporra } from "./components/Projeto";
+import { ProjectsSection } from "./components/Projeto";
 
 export function Main() {
     return (
@@ -12,7 +12,7 @@ export function Main() {
             <IntroSection />
             <AboutSection />
             <SkillsSection />
-            <Funcionaporra />
+            <ProjectsSection />
             {/* <ProjectsSection /> */}
             <ContactSection />
         </MainContainer>

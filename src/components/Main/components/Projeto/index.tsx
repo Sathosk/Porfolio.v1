@@ -12,7 +12,7 @@ import {
 } from "./style";
 import { Modal } from "./Modal/index.js";
 
-export function Funcionaporra() {
+export function ProjectsSection() {
     const [modalOpen, setModalOpen] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [currentProject, setCurrentProject] = useState<ProjectsType>(
