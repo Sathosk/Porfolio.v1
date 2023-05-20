@@ -1,9 +1,9 @@
 import styled from "styled-components";
-// import skillImage from "/../../../../assets/skill.jpg";
+import skillImage from "/../../../../assets/skill.jpg";
 
 export const SkillsContainer = styled.section`
     /* background-color: ${props => props.theme["--blue-300"]}; */
-    background-image: url("/src/assets/skill.jpg");
+    background-image: url(${skillImage});
 `;
 
 export const SkillsOverlay = styled.div`
