@@ -22,7 +22,7 @@ export const ResumeContainer = styled.section`
     height: 20rem;
 
     background-size: cover;
-    background-image: url(${resumeImage});
+    background-image: url("/src/assets/resumeSection.jpg");
     background-attachment: fixed;
     background-position: center;
 `;

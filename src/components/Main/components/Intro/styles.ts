@@ -4,7 +4,7 @@ import pxfuel from '/../../../../assets/pxfuel.jpg'
 export const Intro = styled.section`
     position: relative;
     height: 100vh;
-    background-image: url(${pxfuel});
+    background-image: url("/src/assets/pxfuel.jpg");
 `;
 
 export const IntroContainer = styled.div`

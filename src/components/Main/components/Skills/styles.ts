@@ -3,7 +3,7 @@ import skillImage from "/../../../../assets/skill.jpg";
 
 export const SkillsContainer = styled.section`
     /* background-color: ${props => props.theme["--blue-300"]}; */
-    background-image: url(${skillImage});
+    background-image: url("/src/assets/skill.jpg");
 `;
 
 export const SkillsOverlay = styled.div`
