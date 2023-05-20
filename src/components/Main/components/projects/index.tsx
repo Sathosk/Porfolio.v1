@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
-import { Carousel, CarouselItem } from "react-round-carousel";
+// import { useState, useEffect } from "react";
+// import { Carousel, CarouselItem } from "react-round-carousel";
 
-import { projects, ProjectsType } from "../../../../data/projects.js";
+// import { projects, ProjectsType } from "../../../../data/projects.js";
 
 import "/src/styles/carousel.css";
 import {
@@ -13,57 +13,57 @@ import {
 import { Modal } from "./components/Modal/index.js";
 
 export function ProjectsSection() {
-    const [modalOpen, setModalOpen] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const [currentProject, setCurrentProject] = useState<ProjectsType>(
-        projects[0]
-    );
+    // const [modalOpen, setModalOpen] = useState(false);
+    // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    // const [currentProject, setCurrentProject] = useState<ProjectsType>(
+    //     projects[0]
+    // );
 
-    // Monitor Screen Size
-    useEffect(() => {
-        function handleResize() {
-            setWindowWidth(window.innerWidth);
-        }
+    // // Monitor Screen Size
+    // useEffect(() => {
+    //     function handleResize() {
+    //         setWindowWidth(window.innerWidth);
+    //     }
 
-        window.addEventListener("resize", handleResize);
+    //     window.addEventListener("resize", handleResize);
 
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener("resize", handleResize);
+    //     };
+    // }, []);
 
-    // Create an array of Carousel Items
-    const items: CarouselItem[] = projects.map((project: ProjectsType) => ({
-        alt: "",
-        image: `${project.img}`,
-        content: (
-            <div
-                onClick={() => handleOpenModal(project)}
-                className="carousel__content"
-            >
-                <strong>{project.title}</strong>
-                <span>{project.shortDesc}</span>
-            </div>
-        ),
-    }));
+    // // Create an array of Carousel Items
+    // const items: CarouselItem[] = projects.map((project: ProjectsType) => ({
+    //     alt: "",
+    //     image: `${project.img}`,
+    //     content: (
+    //         <div
+    //             onClick={() => handleOpenModal(project)}
+    //             className="carousel__content"
+    //         >
+    //             <strong>{project.title}</strong>
+    //             <span>{project.shortDesc}</span>
+    //         </div>
+    //     ),
+    // }));
 
-    // Open modal
-    function handleOpenModal(project: ProjectsType) {
-        setModalOpen(!modalOpen);
+    // // Open modal
+    // function handleOpenModal(project: ProjectsType) {
+    //     setModalOpen(!modalOpen);
 
-        setCurrentProject(project);
-        document.body.style.overflow = "hidden";
-    }
+    //     setCurrentProject(project);
+    //     document.body.style.overflow = "hidden";
+    // }
 
-    // Close modal
-    function handleCloseModal() {
-        setModalOpen(!modalOpen);
-        document.body.style.overflow = "unset";
-    }
+    // // Close modal
+    // function handleCloseModal() {
+    //     setModalOpen(!modalOpen);
+    //     document.body.style.overflow = "unset";
+    // }
 
     return (
         <ProjectsContainer id="projects">
-            <Modal
+            {/* <Modal
                 modalOpen={modalOpen}
                 currentProject={currentProject}
                 closeModal={handleCloseModal}
@@ -98,7 +98,7 @@ export function ProjectsSection() {
                         </ButtonComponent>
                     </div>
                 </div>
-            </ResumeContainer>
+            </ResumeContainer> */}
         </ProjectsContainer>
     );
 }
