@@ -21,7 +21,6 @@ export function SkillsSection() {
                     </h2>
                     <Tools>
                         {tools.map((tool, index) => {
-                            console.log(tool.name);
                             return (
                                 <ToolBox
                                     data-aos="fade-right"
