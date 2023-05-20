@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import resumeImage from "../../../../assets/resumeSection.jpg";
+import resumeImage from "/../../../../assets/resumeSection.jpg";
 
 export const ProjectsContainer = styled.section`
     position: relative;
