@@ -4,7 +4,7 @@ import { SkillsSection } from "./components/Skills";
 import { ContactSection } from "./components/Contact";
 // import ProjectsSection from "./components/Project";
 import { MainContainer } from "./styles";
-import { ProjectsSection } from "./components/Projeto";
+import { ProjectsSection } from "./components/Projects";
 
 export function Main() {
     return (
