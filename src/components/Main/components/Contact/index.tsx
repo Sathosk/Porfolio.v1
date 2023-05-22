@@ -1,3 +1,5 @@
+import { useForm, SubmitHandler } from "react-hook-form";
+import axios from "axios";
 import {
     ContactContainer,
     ContactFormWrapper,
@@ -7,7 +9,27 @@ import {
 } from "./style";
 import { EnvelopeSimple } from "phosphor-react";
 
+interface FormData {
+    name: string;
+    email: string;
+    message: string;
+}
+
 export function ContactSection() {
+    const { register, handleSubmit, reset } = useForm<FormData>();
+
+    const onSubmit: SubmitHandler<FormData> = async (data) => {
+        const url = "https://contact-server-fqhx.vercel.app/contact/send";
+
+        try {
+            const response = await axios.post(url, data);
+            console.log(response);
+            reset();
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
     return (
         <ContactContainer id="contact">
             <div className="container">
@@ -96,7 +118,8 @@ export function ContactSection() {
                         </SocialMedia>
                     </ContactText>
                     <ContactFormWrapper>
-                        <form action="">
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            {/* Form Heading */}
                             <div
                                 data-aos="fade-right"
                                 data-aos-delay={800}
@@ -105,7 +128,7 @@ export function ContactSection() {
                             >
                                 <h4>Get in touch!</h4>
                             </div>
-
+                            {/* Input name */}
                             <div
                                 className="inputContainer"
                                 data-aos="fade-right"
@@ -121,9 +144,10 @@ export function ContactSection() {
                                     type="text"
                                     id="name"
                                     placeholder="Name"
+                                    {...register("name")}
                                 />
                             </div>
-
+                            {/* Input email */}
                             <div
                                 data-aos="fade-right"
                                 data-aos-delay={1200}
@@ -138,9 +162,10 @@ export function ContactSection() {
                                     type="email"
                                     id="email"
                                     placeholder="Email"
+                                    {...register("email")}
                                 />
                             </div>
-
+                            {/* Textarea */}
                             <div
                                 data-aos="fade-right"
                                 data-aos-delay={1400}
@@ -152,14 +177,14 @@ export function ContactSection() {
                                 </label>
                                 <textarea
                                     required
-                                    name=""
                                     id="content"
                                     cols={30}
                                     rows={10}
                                     placeholder="In this space, your words have the power to inspire..."
+                                    {...register("message")}
                                 ></textarea>
                             </div>
-
+                            {/* Submit Button */}
                             <div
                                 data-aos="fade-right"
                                 data-aos-delay={1300}

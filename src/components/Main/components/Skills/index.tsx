@@ -23,6 +23,7 @@ export function SkillsSection() {
                         {tools.map((tool, index) => {
                             return (
                                 <ToolBox
+                                    key={index}
                                     data-aos="fade-right"
                                     data-aos-delay={`${(index + 1) * 300}`}
                                     data-aos-easing="ease-in"
