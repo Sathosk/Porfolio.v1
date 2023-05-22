@@ -29,8 +29,8 @@ export const projects: ProjectsType[] = [
     },
     {
         title: 'Portfolio Website',
-        technologies: 'HTML, CSS, JavaScript, TypeScript, React, Node, Express, MongoDB, Mongoose, Styled-components',
-        liveLink: 'https://social-media-feed.netlify.app',
+        technologies: 'HTML, CSS, JavaScript, TypeScript, React, Node, Express, Styled-components',
+        liveLink: 'https://tiagopereira.netlify.app/',
         githubLink: 'https://github.com/Sathosk/Porfolio.v1',
         img: 'https://github.com/Sathosk/Porfolio.v1/assets/63148481/4bd37e26-7535-4d0b-b34d-04f48388b99b',
         description: "This is the first version of my Portfolio Website.",

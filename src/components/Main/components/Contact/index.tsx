@@ -135,7 +135,7 @@ export function ContactSection() {
                                 </label>
                                 <input
                                     required
-                                    type="text"
+                                    type="email"
                                     id="email"
                                     placeholder="Email"
                                 />
