@@ -36,11 +36,10 @@ export function ContactSection() {
     });
 
     const onSubmit: SubmitHandler<FormData> = async (data) => {
-        //const url = "https://contact-server-fqhx.vercel.app/contact/send";
-        const localUrl = "http://localhost:8000/contact/send";
+        const url = "https://contact-server-fqhx.vercel.app/contact/send";
 
         try {
-            const response = await axios.post(localUrl, data);
+            const response = await axios.post(url, data);
 
             reset();
         } catch (error) {
