@@ -23,7 +23,7 @@ export function ContactSection() {
 
         try {
             const response = await axios.post(url, data);
-            console.log(response);
+
             reset();
         } catch (error) {
             console.error(error);
