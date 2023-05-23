@@ -94,7 +94,12 @@ export function ProjectsSection() {
                     <div className="container">
                         <h2>CHECK OUT MY RÉSUMÉ!</h2>
                         <ButtonComponent>
-                            <a href="#">Grab a copy</a>
+                            <a
+                                href="https://docdro.id/0JNTRdU"
+                                target="__blank"
+                            >
+                                Grab a copy
+                            </a>
                         </ButtonComponent>
                     </div>
                 </div>

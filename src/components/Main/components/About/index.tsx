@@ -39,8 +39,8 @@ export function AboutSection() {
                         Hi, I'm Tiago, a Full Stack Software Engineer with a
                         passion for all things tech. As a graduate of University
                         Nove de Julho (UNINOVE) with an Associate Degree in
-                        Information Technology, I'm constantly seeking out the
-                        latest trends and exploring new ideas.<br></br>
+                        Computer Science, I'm constantly seeking out the latest
+                        trends and exploring new ideas.<br></br>
                         <br></br>
                         But life isn't all work - I also love to travel, read
                         about science and space, and challenge myself with a
