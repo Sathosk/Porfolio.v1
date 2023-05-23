@@ -37,12 +37,11 @@ export function ContactSection() {
 
     const onSubmit: SubmitHandler<FormData> = async (data) => {
         const url = "https://contact-server-fqhx.vercel.app/contact/send";
-        const localURL = "http://localhost:8000/contact/send";
 
         try {
             setIsLoading(true);
 
-            const response = await axios.post(localURL, data);
+            const response = await axios.post(url, data);
 
             if (response.data.message) {
                 setIsLoading(false);
@@ -82,7 +81,7 @@ export function ContactSection() {
                             <div
                                 className="inputContainer relative"
                                 data-aos="fade-right"
-                                data-aos-delay={1000}
+                                data-aos-delay={900}
                                 data-aos-duration="500"
                                 data-aos-once="true"
                             >
@@ -106,7 +105,7 @@ export function ContactSection() {
                             {/* Input email */}
                             <div
                                 data-aos="fade-right"
-                                data-aos-delay={1200}
+                                data-aos-delay={1000}
                                 data-aos-duration="500"
                                 data-aos-once="true"
                             >
@@ -130,7 +129,7 @@ export function ContactSection() {
                             {/* Textarea */}
                             <div
                                 data-aos="fade-right"
-                                data-aos-delay={1400}
+                                data-aos-delay={1100}
                                 data-aos-duration="500"
                                 data-aos-once="true"
                             >
@@ -157,7 +156,7 @@ export function ContactSection() {
                             {/* Submit Button */}
                             <div
                                 data-aos="fade-right"
-                                data-aos-delay={1300}
+                                data-aos-delay={1100}
                                 data-aos-duration="500"
                                 data-aos-once="true"
                             >

@@ -57,7 +57,7 @@ export function ContactDescription() {
 
             <SocialMedia
                 data-aos="fade-right"
-                data-aos-delay={1200}
+                data-aos-delay={800}
                 data-aos-duration="500"
                 data-aos-once="true"
             >
