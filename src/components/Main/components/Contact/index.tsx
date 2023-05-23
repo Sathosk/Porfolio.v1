@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -5,12 +6,9 @@ import * as zod from "zod";
 
 import { ContactContainer, ContactFormWrapper, ContactWrapper } from "./style";
 import { ContactDescription } from "./components/ContactDescription";
-
-// interface FormData {
-//     name: string;
-//     email: string;
-//     message: string;
-// }
+import { SubmitButton } from "./components/SubmitButton";
+import { LoadingButton } from "./components/LoadingButton";
+import { EmailSentModal } from "./components/EmailSentModal";
 
 const contactFormDataSchema = zod.object({
     name: zod.string().trim().nonempty("This field is required."),
@@ -21,6 +19,8 @@ const contactFormDataSchema = zod.object({
 type FormData = zod.infer<typeof contactFormDataSchema>;
 
 export function ContactSection() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const {
         register,
         handleSubmit,
@@ -39,13 +39,27 @@ export function ContactSection() {
         const url = "https://contact-server-fqhx.vercel.app/contact/send";
 
         try {
+            setIsLoading(true);
+
             const response = await axios.post(url, data);
+
+            if (response.data.message) {
+                setIsLoading(false);
+                setIsOpen(true);
+                document.body.style.overflow = "hidden";
+            } else console.log(response.data.error);
 
             reset();
         } catch (error) {
             console.error(error);
         }
     };
+
+    // Close modal
+    function handleCloseModal() {
+        setIsOpen(!isOpen);
+        document.body.style.overflow = "unset";
+    }
 
     return (
         <ContactContainer id="contact">
@@ -146,10 +160,18 @@ export function ContactSection() {
                                 data-aos-duration="500"
                                 data-aos-once="true"
                             >
-                                <button type="submit">Send away</button>
+                                {isLoading ? (
+                                    <LoadingButton />
+                                ) : (
+                                    <SubmitButton />
+                                )}
                             </div>
                         </form>
                     </ContactFormWrapper>
+                    <EmailSentModal
+                        isOpen={isOpen}
+                        closeModal={handleCloseModal}
+                    />
                 </ContactWrapper>
             </div>
         </ContactContainer>

@@ -88,20 +88,6 @@ export const ContactFormWrapper = styled.div`
         margin-bottom: 0.4rem;
     }
 
-    div > button {
-        border: 1px solid white;
-        border-radius: 8px;
-        padding: 0.7rem 1.5rem;
-        margin-top: 1.5rem;
-
-        transition: background 0.4s ease
-    }
-
-    div > button:hover {
-        color: ${props => props.theme['--blue-500']};
-        background: ${props => props.theme['--white']};
-    }
-
     @media (max-width: 1050px) {
         width: 100%;
         padding-top: 2rem;

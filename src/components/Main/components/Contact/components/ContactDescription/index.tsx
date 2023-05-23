@@ -1,5 +1,5 @@
 import { EnvelopeSimple } from "phosphor-react";
-import { ContactText, SocialMedia } from "./style";
+import { ContactText, SocialMedia } from "./styles";
 
 export function ContactDescription() {
     return (
