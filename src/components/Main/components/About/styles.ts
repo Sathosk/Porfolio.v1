@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import profilePic from "../../../../assets/profilePic.jpeg";
 
 export const AboutContainer = styled.section`
     display: flex;
@@ -19,7 +20,8 @@ export const AboutWrapper = styled.div`
 
 
 export const ImgWrapper = styled.div`
-    background: white;
+    background: red;
+    overflow: hidden;
     animation: morph 8s ease-in-out infinite;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.6);
@@ -27,6 +29,12 @@ export const ImgWrapper = styled.div`
     transition: all 1s ease-in-out;
     width: 10rem;
     z-index: 5;
+
+    img {
+        width: 100%;
+        
+        border-radius: 50%;
+    }
 
     @keyframes morph {
         0% {

@@ -1,5 +1,6 @@
 import { GameController, Keyboard, Planet } from "phosphor-react";
 
+import profilePic from "../../../../assets/profilePic.jpeg";
 import Tilt from "react-parallax-tilt";
 import {
     AboutContainer,
@@ -28,7 +29,7 @@ export function AboutSection() {
                         data-aos-duration="1700"
                         data-aos-once="true"
                     >
-                        <img src="" alt="" />
+                        <img src={profilePic} alt="" />
                     </ImgWrapper>
 
                     <p
