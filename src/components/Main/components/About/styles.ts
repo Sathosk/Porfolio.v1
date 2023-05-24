@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import profilePic from "../../../../assets/profilePic.jpeg";
 
 export const AboutContainer = styled.section`
     display: flex;
