@@ -36,7 +36,7 @@ export function ContactSection() {
     });
 
     const onSubmit: SubmitHandler<FormData> = async (data) => {
-        const url = "https://contact-server-fqhx.vercel.app/contact/send";
+        const url = import.meta.env.VITE_CONTACT_URL;
 
         try {
             setIsLoading(true);
@@ -47,7 +47,7 @@ export function ContactSection() {
                 setIsLoading(false);
                 setIsOpen(true);
                 document.body.style.overflow = "hidden";
-            } else console.log(response.data.error);
+            } else console.error(response.data.error);
 
             reset();
         } catch (error) {
