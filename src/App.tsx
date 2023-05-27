@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { ThemeProvider } from "styled-components";
 
 import { GlobalStyle } from "./styles/global";
@@ -12,23 +12,42 @@ function App() {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [activeSection, setActiveSection] = useState("intro");
 
-    const sections = ["intro", "about", "skills", "projects", "contact"]; // add any other section ids here to highlight the menu when on screen.
-    const sectionOffsets = sections.map((section) => {
-        return {
+    const sections = [
+        "intro",
+        "about",
+        "skills",
+        "projects",
+        "contact",
+    ].reverse(); // add any other section ids here to highlight the menu when on screen.
+    const sectionOffsets = useMemo(() => {
+        return sections.map((section) => ({
             id: section,
             offsetTop: document.getElementById(section)?.offsetTop || 0,
-        };
-    });
+        }));
+    }, [sections]);
 
     useEffect(() => {
+        let isScrolling = false;
+
         function handleScroll() {
-            const currentSection = sectionOffsets.reduce((prev, curr) => {
-                return curr.offsetTop <= scrollPosition + 50 ? curr : prev;
-            }, sectionOffsets[0]);
+            if (!isScrolling) {
+                isScrolling = true;
 
-            setActiveSection(currentSection.id);
+                requestAnimationFrame(() => {
+                    const currentPosition = window.pageYOffset;
+                    setScrollPosition(currentPosition);
 
-            setScrollPosition(window.pageYOffset);
+                    const currentSection = sectionOffsets.find((section) => {
+                        return section.offsetTop - 50 <= currentPosition;
+                    });
+
+                    if (currentSection) {
+                        setActiveSection(currentSection.id);
+                    }
+
+                    isScrolling = false;
+                });
+            }
         }
 
         window.addEventListener("scroll", handleScroll);
@@ -36,7 +55,7 @@ function App() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [scrollPosition, sectionOffsets]);
+    }, [sectionOffsets]);
 
     const isOnTop = scrollPosition === 0;
 
