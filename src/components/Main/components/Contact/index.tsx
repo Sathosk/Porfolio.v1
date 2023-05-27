@@ -19,7 +19,7 @@ const contactFormDataSchema = zod.object({
 type FormData = zod.infer<typeof contactFormDataSchema>;
 
 export function ContactSection() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const {
         register,
@@ -45,7 +45,7 @@ export function ContactSection() {
 
             if (response.data.message) {
                 setIsLoading(false);
-                setIsOpen(true);
+                setIsModalOpen(true);
                 document.body.style.overflow = "hidden";
             } else console.error(response.data.error);
 
@@ -57,7 +57,7 @@ export function ContactSection() {
 
     // Close modal
     function handleCloseModal() {
-        setIsOpen(!isOpen);
+        setIsModalOpen(!isModalOpen);
         document.body.style.overflow = "unset";
     }
 
@@ -169,7 +169,7 @@ export function ContactSection() {
                         </form>
                     </ContactFormWrapper>
                     <EmailSentModal
-                        isOpen={isOpen}
+                        isOpen={isModalOpen}
                         closeModal={handleCloseModal}
                     />
                 </ContactWrapper>

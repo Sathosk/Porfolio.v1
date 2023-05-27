@@ -4,8 +4,8 @@ import { Navbar } from "./components/Navbar";
 import { useEffect, useMemo, useState } from "react";
 
 export function Header() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isOnTop, setIsOnTop] = useState(true);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isPageOnTop, setIsOnTop] = useState(true);
     const [activeSection, setActiveSection] = useState("intro");
 
     const sections = [
@@ -30,15 +30,15 @@ export function Header() {
                 isScrolling = true;
 
                 requestAnimationFrame(() => {
-                    const currentPosition = window.pageYOffset;
+                    const scrollPosition = window.pageYOffset;
 
-                    if (currentPosition === 0) setIsOnTop(true);
-                    if (currentPosition > 0 && isOnTop !== false) {
+                    if (scrollPosition === 0) setIsOnTop(true);
+                    if (scrollPosition > 0 && isPageOnTop !== false) {
                         setIsOnTop(false);
                     }
 
                     const currentSection = sectionOffsets.find((section) => {
-                        return section.offsetTop - 50 <= currentPosition;
+                        return section.offsetTop - 50 <= scrollPosition;
                     });
 
                     if (currentSection && currentSection.id !== activeSection) {
@@ -55,14 +55,14 @@ export function Header() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [sectionOffsets, activeSection, isOnTop]);
+    }, [sectionOffsets, activeSection, isPageOnTop]);
 
     function toggleNavMenu() {
-        setIsOpen(!isOpen);
+        setIsDropdownOpen(!isDropdownOpen);
     }
 
     return (
-        <HeaderContainer isOnTop={isOnTop}>
+        <HeaderContainer isOnTop={isPageOnTop}>
             <Brand href="#">
                 <Code size={24} color="white" weight="bold" />
                 TIAGO CRUZ
@@ -70,7 +70,7 @@ export function Header() {
 
             <Navbar
                 toggleNavMenu={toggleNavMenu}
-                openNavbar={isOpen}
+                openNavbar={isDropdownOpen}
                 activeSection={activeSection}
             />
         </HeaderContainer>

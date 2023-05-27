@@ -13,7 +13,7 @@ import {
 import { Modal } from "./Modal/index.js";
 
 export function ProjectsSection() {
-    const [modalOpen, setModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [currentProject, setCurrentProject] = useState<ProjectsType>(
         projects[0]
@@ -49,7 +49,7 @@ export function ProjectsSection() {
 
     // Open modal
     function handleOpenModal(project: ProjectsType) {
-        setModalOpen(!modalOpen);
+        setIsModalOpen(!isModalOpen);
 
         setCurrentProject(project);
         document.body.style.overflow = "hidden";
@@ -57,14 +57,14 @@ export function ProjectsSection() {
 
     // Close modal
     function handleCloseModal() {
-        setModalOpen(!modalOpen);
+        setIsModalOpen(!isModalOpen);
         document.body.style.overflow = "unset";
     }
 
     return (
         <ProjectsContainer id="projects">
             <Modal
-                modalOpen={modalOpen}
+                modalOpen={isModalOpen}
                 currentProject={currentProject}
                 closeModal={handleCloseModal}
             />
