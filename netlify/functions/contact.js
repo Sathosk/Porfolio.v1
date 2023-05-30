@@ -3,7 +3,6 @@ import sgMail from "@sendgrid/mail";
 
 exports.handler = async (event, context, callback) => {
     try {
-        console.log(event.body);
         const { name, email, message } = JSON.parse(event.body);
         sgMail.setApiKey(process.env.VITE_SENDGRID_API_KEY);
 
