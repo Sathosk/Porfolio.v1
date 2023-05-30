@@ -31,6 +31,10 @@ export const ContactText = styled.div`
         width: 100%;
         justify-content: center;
     }
+
+    @media (max-width: 500px) {
+        padding: 0;
+    }
 `;
 
 export const SocialMedia = styled.div`

@@ -14,6 +14,10 @@ export const ContactWrapper = styled.div`
         flex-direction: column;
         align-items: center;
     }
+
+    @media (max-width: 500px) {
+        width: 95%;
+    }
 `;
 
 export const ContactFormWrapper = styled.div`
