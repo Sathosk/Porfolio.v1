@@ -47,7 +47,13 @@ export function ContactSection() {
                 setIsLoading(false);
                 setIsModalOpen(true);
                 document.body.style.overflow = "hidden";
-            } else console.error(response.data.error);
+            } else {
+                console.error(response.data.error);
+                setIsLoading(false);
+                alert(
+                    "Sorry, there was an error sending the email, try again later!"
+                );
+            }
 
             reset();
         } catch (error) {
