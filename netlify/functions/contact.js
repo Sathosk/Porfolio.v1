@@ -1,6 +1,6 @@
 import sgMail from "@sendgrid/mail";
+/* eslint-disable */
 
-// eslint-disable-next-line no-undef
 exports.handler = async (event, context, callback) => {
     try {
         console.log(event.body);
