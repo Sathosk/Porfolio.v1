@@ -5,11 +5,11 @@ exports.handler = async (event, context, callback) => {
     try {
         console.log(event.body);
         const { name, email, message } = JSON.parse(event.body);
-        sgMail.setApiKey(import.meta.env.VITE_SENDGRID_API_KEY);
+        sgMail.setApiKey(process.env.VITE_SENDGRID_API_KEY);
 
         const mailOptions = {
-            to: import.meta.env.VITE_MAIL_RECIPIENT,
-            from: import.meta.env.VITE_MAIL_RECIPIENT,
+            to: process.env.VITE_MAIL_RECIPIENT,
+            from: process.env.VITE_MAIL_RECIPIENT,
             subject: "Portfolio Contact Submission",
             text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
         };
