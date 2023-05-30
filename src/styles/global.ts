@@ -67,4 +67,10 @@ export const GlobalStyle = createGlobalStyle`
             background-attachment: unset;
         }
     }
+
+    @media (max-width: 500px) {
+        .container {
+            width: 90%;
+        }
+    }
 `;

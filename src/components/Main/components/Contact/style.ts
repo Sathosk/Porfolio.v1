@@ -76,10 +76,6 @@ export const ContactFormWrapper = styled.div`
         border-radius: 8px;
     }
 
-    input::placeholder, textarea::placeholder {
-        
-    }
-
     div > *{
         display: block;
     }
@@ -111,5 +107,6 @@ export const ContactFormWrapper = styled.div`
             width: 100%;
         }
     }
+
 `;
 

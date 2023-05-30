@@ -14,6 +14,7 @@ export const IntroContainer = styled.div`
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    text-align: center;
 
     height: 100%;
 

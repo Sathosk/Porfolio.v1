@@ -44,5 +44,5 @@ export const SocialMedia = styled.div`
     gap: 1rem;
     
     width: 10rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
 `
