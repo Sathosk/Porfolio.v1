@@ -1,6 +1,6 @@
 # Portfolio Website
 
-I developed my portfolio website using TypeScript and React on the front-end, along with popular libraries such as react-hook-form, styled-components, and framer-motion. The website showcases my skills and projects in an interactive and visually appealing manner. For the back-end, I utilized Node.js and Express to create a robust and efficient server-side implementation.
+I developed my portfolio website using TypeScript and React on the front-end, along with popular libraries such as react-hook-form, styled-components, and framer-motion. Also I utilized serverless structure to deal with the contact form. The website showcases my skills and projects in an interactive and visually appealing manner. For the back-end, I utilized Node.js and Express to create a robust and efficient server-side implementation.
 
 You can check it out the here: https://tiagopereira.netlify.app/
 
